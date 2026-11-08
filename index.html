@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo digital de productos para pequeños negocios.">
+  <title>Sabores del Barrio | Catálogo digital</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <!-- Encabezado: nombre, logo opcional y descripción del negocio -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="header-top">
+        <div class="brand">
+          <img id="business-logo" class="business-logo" alt="" hidden>
+          <div class="brand-text">
+            <p class="eyebrow">Catálogo digital</p>
+            <h1 id="business-name">Sabores del Barrio</h1>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="share-catalog" type="button" class="share-btn">Compartir catálogo</button>
+          <p id="share-feedback" class="share-feedback" aria-live="polite"></p>
+        </div>
+      </div>
+      <p id="business-description" class="subtitle">
+        Productos frescos y artesanales. Buscá, filtrá por categoría y consultá por WhatsApp en un toque.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <noscript>
+      <p class="empty-state">Este catálogo necesita JavaScript activado para mostrar los productos.</p>
+    </noscript>
+
+    <!-- Controles: búsqueda, orden y filtros por categoría -->
+    <section class="controls" aria-label="Buscar, ordenar y filtrar productos">
+      <div class="controls-top">
+        <div class="search-wrap">
+          <label for="search" class="sr-only">Buscar productos</label>
+          <input
+            id="search"
+            type="search"
+            placeholder="Buscar por nombre o descripción..."
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="sort-wrap">
+          <label for="sort-select" class="sr-only">Ordenar productos</label>
+          <select id="sort-select" class="sort-select">
+            <option value="default">Orden: Predeterminado</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="name-asc">Nombre: A-Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filters" id="category-filters" aria-label="Filtros por categoría">
+        <!-- Los botones de categoría se generan con JavaScript -->
+      </div>
+    </section>
+
+    <!-- Mensaje cuando no hay resultados -->
+    <p id="empty-state" class="empty-state" hidden>
+      No se encontraron productos con esos criterios. Probá con otra búsqueda o categoría.
+    </p>
+
+    <!-- Grilla de productos -->
+    <section id="product-grid" class="product-grid" aria-label="Listado de productos">
+      <!-- Las tarjetas de producto se generan con JavaScript -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Catálogo hecho con HTML, CSS y JavaScript puro. Personalizá productos y WhatsApp en <code>js/app.js</code>.</p>
+    </div>
+  </footer>
+</body>
+</html>
